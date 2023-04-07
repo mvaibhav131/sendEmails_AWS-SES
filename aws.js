@@ -59,7 +59,7 @@ const AWS = require('aws-sdk');
         });
 
     }catch(error){
-        console.logd(error)
+        console.log(error)
     }
  };
 
