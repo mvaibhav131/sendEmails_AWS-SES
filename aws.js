@@ -1,5 +1,5 @@
 const AWS = require('aws-sdk');
- require('aws-sdk/lib/maintenance_mode_message').suppress = true;
+ require('aws-sdk/lib/maintenance_mode_message').suppress = true; //set supress for aws-sdk v2 to v3 convert
  const env= require('dotenv');
  env.config();
 
@@ -9,7 +9,7 @@ const AWS = require('aws-sdk');
     secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY,
     region:process.env.AWS_REGION,
  }
-
+//create the new client
  const SES = new AWS.SES(awsConfig)
 
 
@@ -40,7 +40,7 @@ const AWS = require('aws-sdk');
 
         const emailSend= await SES.sendEmail(params).promise()
 
-        emailSend.MessageId === undefined?console.log("Failed to send Email"):console.log("Email Send",emailSend)
+        emailSend.MessageId === undefined?console.log("Failed to send Email"):console.log("Email Send Succesfully !",emailSend)
 
         // emailSend
         // .then(data=>{
