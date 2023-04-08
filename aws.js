@@ -12,11 +12,11 @@ const AWS = require('aws-sdk');
 
  const SES = new AWS.SES(awsConfig)
 
- const OTP=Math.floor((Math.random() * 10000)+1);
-
 
  const sendEmail= async() =>{
     const fromEmail=process.env.FROM_MAIL
+    const OTP=Math.floor((Math.random() * 10000)+1);
+
 
     try{
         const params= {
