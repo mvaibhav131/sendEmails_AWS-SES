@@ -1,7 +1,7 @@
  const { SESClient } = require('@aws-sdk/client-ses');
-const AWS = require('aws-sdk');
+const AWS = require('aws-sdk'); require('aws-sdk/lib/maintenance_mode_message').suppress = true;
+
  const env= require('dotenv');
- require('aws-sdk/lib/maintenance_mode_message').suppress = true;
 //  const {nanoid}= require('nanoid');
 
  env.config();
