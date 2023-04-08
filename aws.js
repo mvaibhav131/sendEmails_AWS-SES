@@ -1,34 +1,22 @@
- const { SESClient } = require('@aws-sdk/client-ses');
-const AWS = require('aws-sdk'); require('aws-sdk/lib/maintenance_mode_message').suppress = true;
-
+const AWS = require('aws-sdk');
+ require('aws-sdk/lib/maintenance_mode_message').suppress = true;
  const env= require('dotenv');
-//  const {nanoid}= require('nanoid');
-
  env.config();
 
 
  const awsConfig= {
     accessKeyId:process.env.AWS_ACCESS_KEY_ID,
-    secretAccessKey:process.env.WS_SECRET_ACCESS_KEY,
-    region:process.env.AWS_REGION
+    secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY,
+    region:process.env.AWS_REGION,
  }
 
  const SES = new AWS.SES(awsConfig)
 
-//  //also use the following code for aws config set
-//  const client = new SESClient({
-//     region: process.env.AWS_REGION,
-//     credentials: {
-//       accessKeyId: process.env.AWS_ACCESS_KEY_ID,
-//       secretAccessKey: process.env.AWS_SECRET_ACCESS_KEY
-//     }
-//   })
-//  const send_mail = await client.send(mail) same as above
+ const OTP=Math.floor((Math.random() * 10000)+1);
 
 
  const sendEmail= async() =>{
     const fromEmail=process.env.FROM_MAIL
-    const OTP=1233
 
     try{
         const params= {
@@ -52,16 +40,21 @@ const AWS = require('aws-sdk'); require('aws-sdk/lib/maintenance_mode_message').
 
         const emailSend= await SES.sendEmail(params).promise()
 
-        emailSend.then(data=>{
-            console.log("Email Send Successfully",data)
-        })
-        .catch(err=>{
-            console.log(err)
-        });
+        emailSend.MessageId === undefined?console.log("Failed to send Email"):console.log("Email Send",emailSend)
+
+        // emailSend
+        // .then(data=>{
+        //     console.log("Email Send Successfully")
+        // })
+        // .catch(err=>{
+        //     console.log(err)
+        // });
 
     }catch(error){
         console.log(error)
     }
  };
+
+//  sendEmail();
 
  module.exports=sendEmail;
