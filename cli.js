@@ -1,11 +1,15 @@
 const { SESClient, SendEmailCommand } = require('@aws-sdk/client-ses');
 
 const env=require('dotenv');
+const { response } = require('express');
 env.config();
 
 const otp =Math.ceil((Math.random() * 10000)+1);
 
 const sendMail=async()=> {
+
+    const otp =Math.ceil((Math.random() * 10000)+1);
+
 
     try{
         const mail = new SendEmailCommand({
