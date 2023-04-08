@@ -15,7 +15,7 @@ app.use(express.json());
 // dotenv.config({path:'.env'})
 
 app.get('/',(req,res,next)=>{
-    // sendEmail()
+    sendEmail()
     sendMail()
     res.send('<h1>Welcome to AWS-SES</h1>')
 });
