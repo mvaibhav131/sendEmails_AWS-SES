@@ -4,13 +4,13 @@ const env=require('dotenv');
 const { response } = require('express');
 env.config();
 
-const otp =Math.ceil((Math.random() * 10000)+1);
+const otp =Math.ceil((Math.random() * 10000)+1); // creating simple otp
 
 const sendMail=async()=> {
 
     const otp =Math.ceil((Math.random() * 10000)+1);
 
-
+       //creating mail 
     try{
         const mail = new SendEmailCommand({
             Source:process.env.FROM_MAIL,
@@ -31,7 +31,8 @@ const sendMail=async()=> {
               },
             },
           });
-
+  
+          // creating new aws client
           const client = new SESClient({
             region:process.env.AWS_REGION,
             credentials: {
@@ -48,6 +49,7 @@ const sendMail=async()=> {
 
     }catch(e){
         console.log(e)
+        //error console
     }
 }
 
