@@ -3,7 +3,7 @@ const AWS = require('aws-sdk');
  const env= require('dotenv');
  env.config();
 
-
+ // create aws config
  const awsConfig= {
     accessKeyId:process.env.AWS_ACCESS_KEY_ID,
     secretAccessKey:process.env.AWS_SECRET_ACCESS_KEY,
@@ -58,3 +58,4 @@ const AWS = require('aws-sdk');
 //  sendEmail();
 
  module.exports=sendEmail;
+ // exporting sendEmail function
