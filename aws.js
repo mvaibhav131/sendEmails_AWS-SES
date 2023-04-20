@@ -10,7 +10,7 @@ const AWS = require('aws-sdk');
     region:process.env.AWS_REGION,
  }
 //create the new client
- const SES = new AWS.SES(awsConfig)
+ const SES = new AWS.SES(awsConfig);
 
 
  const sendEmail= async() =>{
