@@ -1,6 +1,6 @@
 const AWS = require('aws-sdk');
  require('aws-sdk/lib/maintenance_mode_message').suppress = true; //set supress for aws-sdk v2 to v3 convert
- const env= require('dotenv')
+ const env= require('dotenv');
  env.config();
 
  // create aws config
