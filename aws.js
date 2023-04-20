@@ -51,8 +51,8 @@ const AWS = require('aws-sdk');
         // });
 
     }catch(error){
-        console.log(error)
-    }
+        console.log(error);
+    };
  };
 
 //  sendEmail();
