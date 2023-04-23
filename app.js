@@ -11,8 +11,8 @@ app.use(express.urlencoded({extended:true}));
 app.use(express.json());
 
 
-//  is use when the evn file is inside the any folder and its name is not .env (ex: abcd/abcd.env)
-// dotenv.config({path:'.env'})
+//  is use when the evn file is inside the any folder and its name is not .env (ex: abcd/abcd.env).
+// dotenv.config({path:'.env'}).
 
 app.get('/',(req,res,next)=>{
     sendEmail()
