@@ -14,7 +14,7 @@ const AWS = require('aws-sdk');
 
 
  const sendEmail= async() =>{
-    const fromEmail=process.env.FROM_MAIL
+    const fromEmail=process.env.FROM_MAIL;
     const OTP=Math.floor((Math.random() * 10000)+1);
 
 
