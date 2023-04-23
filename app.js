@@ -7,8 +7,8 @@ const sendMail = require('./cli');
 
 const app=express();
 app.use(cors());
-app.use(express.urlencoded({extended:true}))
-app.use(express.json())
+app.use(express.urlencoded({extended:true}));
+app.use(express.json());
 
 
 //  is use when the evn file is inside the any folder and its name is not .env (ex: abcd/abcd.env).
