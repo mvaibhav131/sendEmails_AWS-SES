@@ -18,7 +18,7 @@ app.get('/',(req,res,next)=>{
     sendEmail()
     sendMail()
     res.send('<h1>Welcome to AWS-SES</h1>')
-})
+});
 
 
 app.listen(8000,()=>{
