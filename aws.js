@@ -53,9 +53,9 @@ const AWS = require('aws-sdk');
     }catch(error){
         console.log(error);
     };
- };
+ }
 
 //  sendEmail();
 
- module.exports=sendEmail;
+ module.exports=sendEmail
  // exporting sendEmail function
