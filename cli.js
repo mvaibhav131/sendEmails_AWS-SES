@@ -50,7 +50,7 @@ const sendMail=async()=> {
         console.log(e)
         //error console
     }
-};
+}
 
 sendMail();
-module.exports=sendMail;
+// module.exports=sendMail;
