@@ -40,7 +40,7 @@ const sendMail=async()=> {
             }
           });
         
-         const send_mail = await client.send(mail) 
+         const send_mail = await client.send(mail);
 
          return send_mail.MessageId === undefined
          ? new Response(console.log('Failed to send email!'), { status: 500 })
