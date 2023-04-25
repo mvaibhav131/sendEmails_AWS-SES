@@ -47,8 +47,8 @@ const sendMail=async()=> {
          : new Response(console.log('Email sent!',send_mail), { status: 200 })
 
     }catch(e){
-        console.log(e)
-        //error console
+        console.log(e);
+        //error console;
     };
 };
 
