@@ -49,8 +49,8 @@ const sendMail=async()=> {
     }catch(e){
         console.log(e)
         //error console
-    }
-}
+    };
+};
 
 sendMail();
 // module.exports=sendMail;
