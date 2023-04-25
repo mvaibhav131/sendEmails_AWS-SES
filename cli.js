@@ -53,4 +53,4 @@ const sendMail=async()=> {
 };
 
 sendMail();
-// module.exports=sendMail;
+module.exports=sendMail;
