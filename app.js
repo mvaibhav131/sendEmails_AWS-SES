@@ -7,7 +7,7 @@ const sendMail = require('./cli');
 
 const app=express();
 app.use(cors());
-app.use(express.urlencoded({extended:true}));
+app.use(express.urlencoded({extended:true}))
 app.use(express.json());
 
 
