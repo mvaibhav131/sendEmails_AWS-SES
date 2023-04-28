@@ -5,7 +5,7 @@ const sendMail = require('./cli');
 // const dotenv=require('dotenv');
 
 
-const app=express();
+const app=express()
 app.use(cors());
 app.use(express.urlencoded({extended:true}));
 app.use(express.json());
