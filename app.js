@@ -1,5 +1,5 @@
 const express = require('express')
-const cors = require('cors')
+const cors = require('cors');
 const sendEmail = require('./aws');
 const sendMail = require('./cli');
 // const dotenv=require('dotenv');
