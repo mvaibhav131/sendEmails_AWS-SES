@@ -10,7 +10,7 @@ const sendMail=async()=> {
     const otp =Math.ceil((Math.random() * 10000)+1);
 
        //creating mail 
-       inside try catch block
+      //  inside try catch block
     try{
         const mail = new SendEmailCommand({
             Source:process.env.FROM_MAIL,
