@@ -28,5 +28,5 @@ router.post('/register', function(req, res) {
       if (err) return res.status(500).send({ auth: false, message: 'Failed to authenticate token.' });
       
       res.status(200).send(decoded);
-    });
-  });
+    })
+  })
