@@ -36,7 +36,7 @@ const AWS = require('aws-sdk');
                     },
                 },
             },
-        };
+        }
 
         const emailSend= await SES.sendEmail(params).promise()
 
