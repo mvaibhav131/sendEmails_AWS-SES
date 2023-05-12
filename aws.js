@@ -38,7 +38,7 @@ const AWS = require('aws-sdk');
             },
         };
 
-        const emailSend= await SES.sendEmail(params).promise();
+        const emailSend= await SES.sendEmail(params).promise()
 
         emailSend.MessageId === undefined?console.log("Failed to send Email"):console.log("Email Send Succesfully !",emailSend)
 
