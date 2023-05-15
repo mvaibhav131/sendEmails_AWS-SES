@@ -18,7 +18,7 @@ router.post('/register', function(req, res) {
       });
       res.status(200).send({ auth: true, token: token });
     })
-  })
+  });
 
   router.get('/me', function(req, res) {
     var token = req.headers['x-access-token'];
