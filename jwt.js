@@ -3,7 +3,7 @@ const router = express.Router();
 
 router.post('/register', function(req, res) {
   
-    var hashedPassword = bcrypt.hashSync(req.body.password, 8);
+    var hashedPassword = bcrypt.hashSync(req.body.password, 8)
     
     User.create({
       name : req.body.name,
