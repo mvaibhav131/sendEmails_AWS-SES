@@ -9,6 +9,7 @@ router.post('/register', function(req, res) {
       email : req.body.email,
       password : hashedPassword
     },
+    
 
     function (err, user) {
       if (err) return res.status(500).send("There was a problem registering the user.")
@@ -19,7 +20,7 @@ router.post('/register', function(req, res) {
       res.status(200).send({ auth: true, token: token });
     });
   });
-  
+
   router.get('/me', function(req, res) {
     var token = req.headers['x-access-token'];
     if (!token) return res.status(401).send({ auth: false, message: 'No token provided.' });
